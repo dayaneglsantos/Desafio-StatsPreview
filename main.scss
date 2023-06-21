@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  max-width: 1440px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  background-color: hsl(244, 38%, 16%);
+  display: flex;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  overflow: hidden;
+
+  .text-content {
+    padding: 80px 50px;
+
+    h2 {
+      color: hsl(0, 0%, 100%);
+      font-size: 37px;
+
+      span {
+        color: hsl(277, 64%, 61%);
+      }
+    }
+
+    & > p {
+      color: hsla(0, 0%, 100%, 0.75);
+      margin: 25px 0 50px;
+      padding-right: 60px;
+    }
+
+    .infos {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 80px;
+
+      .numbers {
+        color: hsl(0, 0%, 100%);
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      & p {
+        color: hsla(0, 0%, 100%, 0.75);
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-top: 5px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .image {
+    position: relative;
+
+    img {
+      height: 100%;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: hsl(303, 88%, 55%);
+      content: "";
+      opacity: 0.5;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 5px;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+  a {
+    color: hsl(228, 40%, 68%);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 90%;
+    margin: 50px 0;
+
+    .text-content {
+      text-align: center;
+      padding: 20px 10px;
+
+      & > p {
+        padding: 0;
+      }
+
+      .infos {
+        display: block;
+        margin: 0;
+
+        .templates {
+          margin: 20px 0;
+        }
+      }
+    }
+
+    .image {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .attribution {
+    font-size: 10px;
+    width: 100%;
+  }
+}
