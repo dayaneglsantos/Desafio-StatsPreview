@@ -99,10 +99,18 @@ body {
 }
 
 @media (max-width: 767px) {
+  body {
+    position: static;
+  }
   .container {
     flex-direction: column-reverse;
     width: 90%;
     margin: 50px 0;
+    position: static;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    transform: none;
 
     .text-content {
       text-align: center;
@@ -132,5 +140,8 @@ body {
   .attribution {
     font-size: 10px;
     width: 100%;
+    position: static;
+    margin: 0 auto;
+    transform: none;
   }
 }
